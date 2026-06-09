@@ -12,21 +12,26 @@ environment:
   sdk: ">=2.12.0 <4.0.0"
 
 dependencies:
-  args: ^2.3.0
-  barcode: ^2.2.4
-  image: ^4.0.6
-  meta: ^1.7.0
+  args: ^2.7.0
+  #barcode: ^2.2.9
+  barcode:
+    git:
+      url: git@github.com:angcyo/dart_barcode.git
+      path: barcode
+      ref: 2.2.9-fix1
+  image: ^4.9.1
+  meta: any
 
 dependency_overrides:
   barcode:
     path: ../barcode
 
 dev_dependencies:
-  build_runner: ^2.4.4
-  crypto: ^3.0.2
-  flutter_lints: ^2.0.1
-  pubspec_extract: ^2.0.5
-  test: ^1.21.4
+  build_runner: ^2.15.0
+  crypto: ^3.0.7
+  flutter_lints: ^6.0.0
+  pubspec_extract: ^2.1.1
+  test: ^1.31.1
 
 executables:
   barcode:
